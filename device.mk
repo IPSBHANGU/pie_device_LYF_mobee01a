@@ -369,7 +369,15 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-service.mobee01a \
     sensors.msm8916
 
-# Thermal
+# TextClassifier smart selection model
+PRODUCT_PACKAGES += \
+    textclassifier.smartselection.bundle1
+
+# Telephony
+PRODUCT_PACKAGES += telephony-ext
+PRODUCT_BOOT_JARS += telephony-ext
+
+# Thermals
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
 
