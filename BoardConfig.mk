@@ -192,8 +192,7 @@ endif
 BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 3
 
 # SELinux
-#include device/qcom/sepolicy/sepolicy.mk
-#include device/qcom/sepolicy/legacy-sepolicy.mk
+include device/qcom/sepolicy/legacy-sepolicy.mk
 
 # Wi-Fi
 BOARD_HAS_QCOM_WLAN := true
