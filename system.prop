@@ -33,6 +33,7 @@ debug.enable.sglscale=1
 # Media
 persist.media.treble_omx=false
 drm.service.enabled=1
+mm.enable.sec.smoothstreaming=true
 vidc.enc.narrow.searchrange=1
 
 # Perf
