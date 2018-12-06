@@ -130,6 +130,11 @@ PRODUCT_PACKAGES += \
     libshims_get_process_name \
     libshims_flp
 
+# IMS
+PRODUCT_PACKAGES += \
+    ims-ext-common \
+    libshim_ims
+
 # Init scripts
 PRODUCT_PACKAGES += \
     fstab.qcom \
@@ -182,6 +187,15 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml
+
+# Netutils
+PRODUCT_PACKAGES += \
+    netutils-wrapper-1.0 \
+    android.system.net.netd@1.0
+
+PRODUCT_PACKAGES += \
+   libandroid_net \
+   libandroid_net_32
 
 # Nubia charger
 PRODUCT_PACKAGES += \
@@ -241,6 +255,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcnefeatureconfig \
     librmnetctl \
+    libtinyxml \
     libxml2
 
 # RenderScript HAL
@@ -367,7 +382,7 @@ PRODUCT_PACKAGES += \
     textclassifier.smartselection.bundle1
 
 # Telephony
-PRODUCT_PACKAGES += qti-telephony-common
+PRODUCT_PACKAGES += telephony-ext ims-ext-common
 PRODUCT_BOOT_JARS += telephony-ext
 
 # Thermals
@@ -385,6 +400,11 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.usb.id.ums=F000 \
     ro.usb.id.ums_adb=9015 \
     ro.usb.vid=05c6
+
+# Whitelisted apps
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml \
+    $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
 
 # Parts
 PRODUCT_PACKAGES += \

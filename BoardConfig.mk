@@ -66,6 +66,9 @@ TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
     /system/vendor/bin/mm-qcamera-daemon=23
 TARGET_NEEDS_LEGACY_CAMERA_HAL1_DYN_NATIVE_HANDLE := true
 
+# CNE
+BOARD_USES_QCNE := true
+
 # Dex optimizion
 ifeq ($(HOST_OS),linux)
  ifneq ($(TARGET_BUILD_VARIANT),eng)
@@ -171,6 +174,9 @@ DEVICE_MATRIX_FILE   := $(DEVICE_PATH)/compatibility_matrix.xml
 # Media
 TARGET_USES_MEDIA_EXTENSIONS := true
 
+# Peripheral manager
+TARGET_PER_MGR_ENABLED := true
+
 # Power
 TARGET_POWERHAL_SET_INTERACTIVE_EXT := $(DEVICE_PATH)/power/power_ext.c
 TARGET_HAS_LEGACY_POWER_STATS := true
@@ -189,7 +195,7 @@ TARGET_QCOM_DISPLAY_VARIANT := caf-msm8916
 TARGET_QCOM_MEDIA_VARIANT := caf-msm8916
 TARGET_RIL_VARIANT := caf
 TARGET_QCOM_WLAN_VARIANT := wlan-caf
-TARGET_COMPILE_WITH_MSM_KERNEL := true
+PROTOBUF_SUPPORTED := true
 
 # LineageHW
 JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|$(DEVICE_PATH)/lineagehw|**/*.java
@@ -214,6 +220,9 @@ BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 3
 # SELinux
 include device/qcom/sepolicy/legacy-sepolicy.mk
 
+# Telephony
+TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
+
 # Wi-Fi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_HOSTAPD_DRIVER := NL80211
@@ -233,6 +242,7 @@ TARGET_PROVIDES_WCNSS_QMI := true
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
+    /system/lib64/lib-imsvideocodec.so|libshim_ims.so \
     /system/vendor/bin/mm-qcamera-daemon|libshim_camera.so \
     /system/vendor/lib/libmmcamera2_imglib_modules.so|libshim_camera.so \
     /system/vendor/lib/libmmcamera2_stats_modules.so|libshim_camera.so \
