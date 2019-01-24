@@ -140,7 +140,6 @@ PRODUCT_PACKAGES += \
     init.qcom.mem.sh \
     init.qcom.bt.sh \
     init.qcom.power.rc \
-    init.qcom.ssr.rc \
     init.qcom.usb.rc \
     init.recovery.qcom.rc \
     ueventd.qcom.rc
