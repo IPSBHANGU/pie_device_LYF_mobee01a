@@ -165,7 +165,7 @@ BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 LZMA_RAMDISK_TARGETS := recovery
 TARGET_KERNEL_SOURCE := kernel/LYF/mobee01a
-TARGET_KERNEL_CONFIG := odonors_defconfig
+TARGET_KERNEL_CONFIG := destructive_defconfig
 
 # Manifest
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
@@ -218,7 +218,7 @@ TARGET_RECOVERY_PIXEL_FORMAT := ABGR_8888
 BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 3
 
 # SELinux
-include device/qcom/sepolicy/legacy-sepolicy.mk
+#include device/qcom/sepolicy/legacy-sepolicy.mk
 
 # Telephony
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true

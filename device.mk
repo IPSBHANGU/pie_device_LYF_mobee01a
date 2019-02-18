@@ -133,7 +133,7 @@ PRODUCT_PACKAGES += \
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common \
-    libshim_ims
+    libshims_ims
 
 # Init scripts
 PRODUCT_PACKAGES += \
