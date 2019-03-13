@@ -341,15 +341,12 @@
     <integer name="config_notificationsBatteryLowARGB">0x00FF0000</integer>
 
     <!-- Default value for led color when battery is medium charged -->
-    <integer name="config_notificationsBatteryMediumARGB">0x000000FF</integer>
+    <integer name="config_notificationsBatteryMediumARGB">0x00FF0000</integer>
 
     <!-- Default value for led color when battery is fully charged -->
     <integer name="config_notificationsBatteryFullARGB">0x0000FF00</integer>
 
-    <!-- Config determines whether to update phone object when voice registration
-         state changes. Voice radio tech change will always trigger an update of
-         phone object irrespective of this config -->
-    <bool name="config_switch_phone_on_voice_reg_state_change">false</bool>
+    
 
     <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveNotificationLed">true</bool>
